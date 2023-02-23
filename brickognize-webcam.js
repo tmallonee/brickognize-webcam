@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         brick webcam
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      1.0.1
 // @description  try to take over the world!
-// @author       You
+// @author       tim
 // @match        https://*.brickognize.com/
 // @match        https://*.brickognize.com/results*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=brickognize.com
@@ -13,23 +13,7 @@
 // ==/UserScript==
 
 GM_addStyle(`
-  /* Add your loading icon CSS here */
-  .loading-icon {
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #3498db;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 2s linear infinite;
-    /*display: none;*/
-  }
-
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-
-
+  
 .loading {
   position: relative;
   display: inline-block;
@@ -149,7 +133,7 @@ GM_addStyle(`
         event.preventDefault();
 
         startLoading(); // Start the loading animation
-        setTimeout(stopLoading, 3000); // Stop the loading animation after 3 seconds
+        setTimeout(stopLoading, 3000); // Stop the loading animation after 3 seconds, doesn't actually matter, page moves on before this hits
 
 
         const canvas = document.createElement("canvas");
@@ -186,7 +170,7 @@ GM_addStyle(`
                     console.log(carbs.listing_id);
                     let listingId = carbs.listing_id;
 
-                    // Wait for 0.25 seconds
+                    // Wait 
                     setTimeout(function() {
                         window.location.href = `https://brickognize.com/results/${listingId}`;
                     }, 500);
