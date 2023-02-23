@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         brickognize webcam
-// @version      1.1.0
+// @version      1.1.1
 // @description  allows for webcam use on brickognize
 // @author       tim
 // @match        https://*.brickognize.com/
@@ -226,7 +226,7 @@ AUTO_OPEN_BRICKLINK_MATCH_PERCENT = 90; // minimum match percentage to auto-open
   searchInput.addEventListener("click", (event) => {
     event.preventDefault();
   });
-  
+
   searchBtn.addEventListener("click", (event) => {
     event.preventDefault();
 
