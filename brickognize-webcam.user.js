@@ -221,7 +221,13 @@ AUTO_OPEN_BRICKLINK_MATCH_PERCENT = 90; // minimum match percentage to auto-open
   // take snapshot from webcam and submit formdata on search input click
   const searchInput = document.querySelector("#search-input");
 
+  const searchBtn = document.querySelector(".btn");
+
   searchInput.addEventListener("click", (event) => {
+    event.preventDefault();
+  });
+  
+  searchBtn.addEventListener("click", (event) => {
     event.preventDefault();
 
     startLoading(); // Start the loading animation
