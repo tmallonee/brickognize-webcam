@@ -1,14 +1,12 @@
 // ==UserScript==
-// @name         brick webcam
-// @namespace    http://tampermonkey.net/
-// @version      1.0.1
-// @description  try to take over the world!
+// @name         brickognize webcam
+// @version      1.0.2
+// @description  allows for webcam use on brickognize
 // @author       tim
 // @match        https://*.brickognize.com/
 // @match        https://*.brickognize.com/results*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=brickognize.com
-// @grant        GM_getValue
-// @grant        GM_setValue
+// @updateURL    https://raw.githubusercontent.com/PoopsMcButt/brickognize-webcam/main/brickognize-webcam.js
 // @grant        GM_addStyle
 // ==/UserScript==
 
