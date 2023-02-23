@@ -1,2 +1,2 @@
 # brickognize-webcam
-allows you to use a webcam on brickognize
+user script that allows you to use a webcam on brickognize
