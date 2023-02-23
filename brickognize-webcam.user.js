@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         brickognize webcam
-// @version      1.0.4
+// @version      1.0.5
 // @description  allows for webcam use on brickognize
 // @author       tim
 // @match        https://*.brickognize.com/
@@ -71,7 +71,6 @@ GM_addStyle(`
         .then((stream) => {
             video.srcObject = stream;
             var elementExists = document.getElementById("query-preview");
-            console.log(elementExists);
             if (elementExists) {
                 //document.querySelector("#query-preview").appendParent(video);
                 //document.querySelector(".box").prepend(video);
@@ -163,9 +162,7 @@ GM_addStyle(`
             fetch("https://api.brickognize.com/predict/", requestOptions)
                 .then(response => response.text())
                 .then((result) => {
-                    console.log(JSON.parse(result));
                     let carbs = JSON.parse(result);
-                    console.log(carbs.listing_id);
                     let listingId = carbs.listing_id;
 
                     // Wait 
