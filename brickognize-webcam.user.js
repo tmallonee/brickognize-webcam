@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         brickognize webcam
-// @version      1.0.2
+// @version      1.0.3
 // @description  allows for webcam use on brickognize
 // @author       tim
 // @match        https://*.brickognize.com/
 // @match        https://*.brickognize.com/results*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=brickognize.com
-// @updateURL    https://raw.githubusercontent.com/PoopsMcButt/brickognize-webcam/main/brickognize-webcam.js
+// @updateURL    https://raw.githubusercontent.com/PoopsMcButt/brickognize-webcam/main/brickognize-webcam.user.js
 // @grant        GM_addStyle
 // ==/UserScript==
 
