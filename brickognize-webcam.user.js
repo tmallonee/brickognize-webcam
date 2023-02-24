@@ -26,7 +26,7 @@ GM_addStyle(`
   bottom: 0;
   width: 0;
   background-color: #ef4444;
-  animation: progress 1000ms linear forwards;
+  animation: progress 1750ms linear forwards;
   color: rgba(255,255,255,var(--tw-text-opacity));
 }
 
@@ -78,7 +78,7 @@ AUTO_OPEN_BRICKLINK_MATCH_PERCENT = 90; // minimum match percentage to auto-open
     let isResultsPage = false;
     if (window.location.href.includes("/results")) {
       isResultsPage = true;
-      console.log("results page");
+      // console.log("results page");
       const segments = window.location.href.split("/");
       const pageId = segments.pop();
       // https://storage.googleapis.com/brickognize-static/responses/572b670a-results.json
@@ -92,7 +92,7 @@ AUTO_OPEN_BRICKLINK_MATCH_PERCENT = 90; // minimum match percentage to auto-open
           let itemScores = items.map((i) => i.score);
 
           //   console.log(itemScores);
-          //   console.log(itemScores[0]);
+            console.log(itemScores[0]);
           //   console.log(AUTO_OPEN_BRICKLINK_MATCH_PERCENT / 100);
           if (AUTO_OPEN_BRICKLINK) {
             if (itemScores[0] >= AUTO_OPEN_BRICKLINK_MATCH_PERCENT / 100) {
