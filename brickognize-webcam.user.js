@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         brickognize webcam
-// @version      1.1.1
+// @version      1.1.2
 // @description  allows for webcam use on brickognize
 // @author       tim
 // @match        https://*.brickognize.com/
