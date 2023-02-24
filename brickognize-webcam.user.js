@@ -39,11 +39,11 @@ GM_addStyle(`
 `);
 
 // TURN FEATURES ON AND OFF HERE //
-ENABLE_COLORS = true; // toggles coloring based on match%. default: true
-COLORS_OPACITY = 0.5; // 0.0-1.0, determines how strong the color is. default: 0.5
-ENABLE_DETAILS = true; // toggles extra details (fig/part/category). default: true
-AUTO_OPEN_BRICKLINK = true; // toggles opening bricklink pages in new tab automatically. default: true.
-AUTO_OPEN_BRICKLINK_MATCH_PERCENT = 90; // minimum match percentage to auto-open a bricklink page. will only open 1 max. default: 90
+const ENABLE_COLORS = true; // toggles coloring based on match%. default: true
+const COLORS_OPACITY = 0.5; // 0.0-1.0, determines how strong the color is. default: 0.5
+const ENABLE_DETAILS = true; // toggles extra details (fig/part/category). default: true
+const AUTO_OPEN_BRICKLINK = true; // toggles opening bricklink pages in new tab automatically. default: true.
+const AUTO_OPEN_BRICKLINK_MATCH_PERCENT = 85; // minimum match percentage to auto-open a bricklink page. will only open 1 max. default: 90
 ///////////////////////////////////
 
 (function () {
@@ -78,7 +78,7 @@ AUTO_OPEN_BRICKLINK_MATCH_PERCENT = 90; // minimum match percentage to auto-open
     let isResultsPage = false;
     if (window.location.href.includes("/results")) {
       isResultsPage = true;
-      // console.log("results page");
+      console.log("results page");
       const segments = window.location.href.split("/");
       const pageId = segments.pop();
       // https://storage.googleapis.com/brickognize-static/responses/572b670a-results.json
@@ -92,7 +92,7 @@ AUTO_OPEN_BRICKLINK_MATCH_PERCENT = 90; // minimum match percentage to auto-open
           let itemScores = items.map((i) => i.score);
 
           //   console.log(itemScores);
-            console.log(itemScores[0]);
+          console.log(itemScores[0]);
           //   console.log(AUTO_OPEN_BRICKLINK_MATCH_PERCENT / 100);
           if (AUTO_OPEN_BRICKLINK) {
             if (itemScores[0] >= AUTO_OPEN_BRICKLINK_MATCH_PERCENT / 100) {
@@ -226,7 +226,6 @@ AUTO_OPEN_BRICKLINK_MATCH_PERCENT = 90; // minimum match percentage to auto-open
   searchInput.addEventListener("click", (event) => {
     event.preventDefault();
   });
-
   searchBtn.addEventListener("click", (event) => {
     event.preventDefault();
 
